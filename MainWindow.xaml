@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practica1"
         mc:Ignorable="d"
-        Title="Administrar Pedidos" Height="450" Width="675.556">
+        Title="Administrar Pedidos" Height="450" Width="675">
     <Grid>
         <TextBox x:Name="txtBxName" HorizontalAlignment="Left" Height="23" Margin="232,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" TextChanged="TextBox_TextChanged"/>
         <Label x:Name="lblName" Content="Nombre del medicamento*" HorizontalAlignment="Left" Margin="59,52,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnAceptar" Content="Confirmar" HorizontalAlignment="Left" Margin="413,349,0,0" VerticalAlignment="Top" Width="113" RenderTransformOrigin="-0.227,0.811" Height="31"/>
+        <Button x:Name="btnAceptar" Content="Confirmar" HorizontalAlignment="Left" Margin="413,349,0,0" VerticalAlignment="Top" Width="113" RenderTransformOrigin="-0.227,0.811" Height="31" Click="btnAceptar_Click"/>
         <Label x:Name="lblType" Content="Tipo de medicamento*" HorizontalAlignment="Left" Margin="82,107,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblSize" Content="Cantidad de producto*" HorizontalAlignment="Left" Margin="82,169,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblDistributor" Content="Distribuidor farmacéutico*" HorizontalAlignment="Left" Margin="65,230,0,0" VerticalAlignment="Top"/>
