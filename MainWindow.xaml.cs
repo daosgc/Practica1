@@ -34,11 +34,21 @@ namespace Practica1
             {
                 distributor = rdBtn3.Content.ToString();
             }
-            Console.WriteLine("productName->"+productName);
-            Console.WriteLine("productSize->" + productSize);
-            Console.WriteLine("productType->" + productType);
-            Console.WriteLine("address->" + firstAddress + secondAddress);
-            Console.WriteLine("distributor->" + distributor);
+
+            // Validar que el formulario este lleno con todos los campos.
+            string commonInputError = "Por favor ingresar un valor.";
+            string commonSelectionError = "Por favor seleccione un valor.";
+            string errorName = string.IsNullOrEmpty(productName) ? commonInputError : "";
+            lblErrorName.Content = errorName;
+            string errorSize = string.IsNullOrEmpty(productSize) ? commonInputError : "";
+            lblErrorSize.Content = errorSize;
+            string errorType = string.IsNullOrEmpty(productType) ? commonSelectionError : "";
+            lblErrorType.Content = errorType;
+            string errorDistributor = string.IsNullOrEmpty(distributor) ? commonSelectionError : "";
+            lblErrorDistributor.Content = errorDistributor;
+            string errorDeliverAddress = (chckBoxPrincipal.IsChecked == true || chckBoxSecondary.IsChecked == true) ? "" : commonSelectionError;
+            lblErrorDeliverAddress.Content = errorDeliverAddress;
+
             //Window1 window1 = new Window1();
             //window1.Show();
         }
@@ -53,6 +63,11 @@ namespace Practica1
             rdBtn1.IsChecked = false;
             rdBtn2.IsChecked = false;
             rdBtn3.IsChecked = false;
+            lblErrorName.Content = "";
+            lblErrorSize.Content = "";
+            lblErrorType.Content = "";
+            lblErrorDistributor.Content = "";
+            lblErrorDeliverAddress.Content = "";
         }
     }
 }
