@@ -19,9 +19,11 @@ namespace Practica1
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1()
+        public Window1(string orderData, string fullAddressToDeliver)
         {
             InitializeComponent();
+            lblDetailsProduct.Content = orderData;
+            lblDeliverAddress.Content = fullAddressToDeliver;
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
@@ -32,6 +34,7 @@ namespace Practica1
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("Se envio el pedido correctamente");
+            this.Close();
         }
     }
 }

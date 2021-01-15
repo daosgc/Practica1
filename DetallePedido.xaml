@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Detalle Pedido" Height="450" Width="675">
     <Grid>
-        <Label x:Name="lblDetailsProduct" Content="" HorizontalAlignment="Left" Margin="75,71,0,0" VerticalAlignment="Top" Width="523"/>
-        <Label x:Name="lblDeliverAddress" Content="" HorizontalAlignment="Left" Margin="75,151,0,0" VerticalAlignment="Top" Width="523" Height="87"/>
+        <Label x:Name="lblDetailsProduct" Content="" HorizontalAlignment="Left" Margin="75,96,0,0" VerticalAlignment="Top" Width="523"/>
+        <Label x:Name="lblDeliverAddress" Content="" HorizontalAlignment="Left" Margin="75,191,0,0" VerticalAlignment="Top" Width="523" Height="47"/>
         <Button x:Name="btnCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="193,309,0,0" Width="111" Height="35" VerticalAlignment="Top" Click="btnCancel_Click"/>
         <Button x:Name="btnSend" Content="Enviar" HorizontalAlignment="Left" Margin="361,309,0,0" VerticalAlignment="Top" Width="111" Height="35" Click="btnSend_Click"/>
 

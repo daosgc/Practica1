@@ -62,9 +62,23 @@ namespace Practica1
                 lblErrorSize.Content = "Número Invalido, solo se permiten enteros positivos.";
             }
 
+            if (string.IsNullOrEmpty(errorName) && string.IsNullOrEmpty(errorSize)
+                && string.IsNullOrEmpty(errorType) && string.IsNullOrEmpty(errorDistributor)
+                && string.IsNullOrEmpty(errorDeliverAddress))
+            {
+                // Formateo de la data de pedido
+                string windowTitle = "Pedido al distribuidor " + distributor;
+                string unitFormat = totalProduct == 1 ? "unidad" : "unidades";
+                string orderSummary = totalProduct + " " + unitFormat + " del " + productType + " " + productName;
+                string fullAddress = "Para la farmacia situada en " + firstAddress;
+                fullAddress = (chckBoxSecondary.IsChecked == true) ? fullAddress + " y la situada en " + secondAddress : fullAddress;
 
-            //Window1 window1 = new Window1();
-            //window1.Show();
+                // Abrimos la ventana del detalle del pedido
+                Window1 window1 = new Window1(orderSummary, fullAddress);
+                window1.Title = windowTitle;
+                window1.Show();
+            }
+            
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
