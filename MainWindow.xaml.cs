@@ -49,6 +49,20 @@ namespace Practica1
             string errorDeliverAddress = (chckBoxPrincipal.IsChecked == true || chckBoxSecondary.IsChecked == true) ? "" : commonSelectionError;
             lblErrorDeliverAddress.Content = errorDeliverAddress;
 
+            // Validar que el dato ingresado en la casilla de cantidad sea el un entero positivo
+            int totalProduct = 0;
+            try
+            {
+                totalProduct = Int32.Parse(productSize);
+                errorSize = totalProduct <= 0 ? "Ingresar un número mayor o igual a 1" : "";
+                lblErrorSize.Content = errorSize;
+            }
+            catch (FormatException)
+            {
+                lblErrorSize.Content = "Número Invalido, solo se permiten enteros positivos.";
+            }
+
+
             //Window1 window1 = new Window1();
             //window1.Show();
         }
