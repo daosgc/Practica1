@@ -33,8 +33,10 @@ namespace Practica1
 
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Se envio el pedido correctamente");
             this.Close();
+            // Abrimos la ventana del final del pedido
+            Final finalWindow = new Final();
+            finalWindow.Show();
         }
     }
 }
